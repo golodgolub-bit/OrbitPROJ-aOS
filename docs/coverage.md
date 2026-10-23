@@ -19,7 +19,7 @@ Version 0.4.0. Independent implementation. Complete Apple parity is not claimed.
 | Typography / Шрифты                    | Local Segoe UI/Roboto/system-ui; --aos-font                                | SF Pro/SF Symbols not bundled                                                          |
 | iOS                                    | Push/pop, interactive back driver, large titles, tabs, modal sheet detents | No complete iOS component/layout/gesture catalog                                       |
 | Windows                                | WPF WebView2 source host                                                   | Compilation checked; runtime pending                                                   |
-| Android                                | Java WebViewAssetLoader source host                                        | Wrapper checked; APK/device pending                                                    |
+| Android                                | Java WebViewAssetLoader source host                                        | Debug APK compiled in GitHub CI; device runtime pending                                                    |
 | GitHub                                 | README with committed PNG/GIF                                              | No live JS demo within README; publication status is verified separately                             |
 
 Read [reference EN](reference.en.md) / [эталон RU](reference.ru.md), [API EN](api.en.md) / [API RU](api.ru.md), and [validation](validation.md). The rendering modules do not provide an Apple asset/font license or operating-system privileges.

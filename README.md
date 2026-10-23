@@ -94,7 +94,7 @@ Open **http://127.0.0.1:4173**. `Start-demo.cmd` starts it on Windows. No depend
 | Target  | Supplied integration                               | Validation                                                 |
 | ------- | -------------------------------------------------- | ---------------------------------------------------------- |
 | Windows | WPF / WebView2 source host                         | Release compilation checked; runtime/device checks pending |
-| Android | Java / WebViewAssetLoader source host              | Wrapper checked; APK/device checks pending                 |
+| Android | Java / WebViewAssetLoader source host              | Debug APK compiled in GitHub CI; device checks pending                 |
 | Web     | ES modules, CSS, optional WebGL2                   | Chromium behavior and accessibility automation             |
 | React   | Attach controllers after mount; dispose on unmount | Typed integration example                                  |
 

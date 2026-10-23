@@ -68,7 +68,7 @@ Open `platforms/android` in Android Studio and sync. Run on API 26+ with an upda
 gradlew.bat assembleDebug
 ```
 
-On macOS/Linux use `./gradlew assembleDebug`. Output: `app/build/outputs/apk/debug`. The Android SDK was not available in the authoring environment, so APK compilation and physical-device behavior are not verified.
+On macOS/Linux use `./gradlew assembleDebug`. Output: `app/build/outputs/apk/debug`. Debug APK compilation passed in [GitHub CI](https://github.com/golodgolub-bit/OrbitPROJ-aOS/actions/runs/40005278667) with JDK 17 and Android SDK 35. Physical-device behavior is not verified.
 
 `MainActivity.java` uses WebViewAssetLoader on `https://appassets.androidplatform.net/assets/ui/`. It loads `demo/macos.html`; replace that entry with your app screen. File/content access and mixed content are disabled; no INTERNET permission or native JS bridge is present. Keep the asset loader, origin restriction, system insets and lifecycle cleanup when embedding into an Activity/Fragment. The demo's Control Center tiles are a layout preview and do not alter hardware settings. The library does not control Android Launcher/app transitions.
 

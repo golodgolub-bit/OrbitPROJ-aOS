@@ -8,4 +8,4 @@ The repository page uses README.md / README.ru.md with committed PNG/GIF assets.
 
 Install from GitHub with `npm install github:golodgolub-bit/OrbitPROJ-aOS#main`, or download `releases/qqduck-aos-0.4.0.tgz`. Main is a moving branch; pin a commit SHA for reproducible dependencies. The npm registry scope is not published. / Для воспроизводимого подключения закрепите конкретный SHA коммита вместо меняющейся ветки main. Публикации в реестре npm нет.
 
-Local Markdown previews are approximations of GitHub layout. See validation.md for checks actually performed. / Локальный просмотр Markdown приближает оформление GitHub; выполненные проверки перечислены в validation.md.
+The published GitHub page was opened and its README cover and GIF were visually checked. See validation.md for build and test evidence. / Опубликованная страница GitHub открыта; обложка и GIF в README проверены визуально. Результаты сборок и тестов — в validation.md.

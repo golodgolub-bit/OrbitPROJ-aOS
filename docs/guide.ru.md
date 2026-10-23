@@ -66,7 +66,7 @@ node scripts/sync-hosts.mjs
 gradlew.bat assembleDebug
 ```
 
-В macOS/Linux: `./gradlew assembleDebug`. APK появится в `app/build/outputs/apk/debug`. В среде подготовки не было Android SDK: компиляция APK и работа на физическом устройстве не проверены.
+В macOS/Linux: `./gradlew assembleDebug`. APK появится в `app/build/outputs/apk/debug`. Debug APK успешно собран в [GitHub CI](https://github.com/golodgolub-bit/OrbitPROJ-aOS/actions/runs/40005278667) с JDK 17 и Android SDK 35. Работа на физических устройствах не проверена.
 
 `MainActivity.java` использует WebViewAssetLoader по адресу `https://appassets.androidplatform.net/assets/ui/`, стартовая страница — `demo/macos.html`. Замените её своим экраном. Доступ file/content и mixed content выключен; INTERNET и нативного JS-моста нет. Сохраните загрузчик ресурсов, ограничения origin, системные отступы и очистку жизненного цикла при переносе в Activity/Fragment. Плитки Control Center — только пример раскладки, они не меняют оборудование. Библиотека не управляет переходами Launcher и других приложений.
 
