@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>OrbitPROJ. / aOS by @qqDUCK — minimal integration</title>
+    <link rel="stylesheet" href="../../src/appearance.css" />
+    <style>
+      body {
+        margin: 0;
+        background: #d1dce7;
+        font: 14px system-ui;
+      }
+      main {
+        padding: 40px;
+      }
+      #panel {
+        width: 300px;
+        padding: 24px;
+        border-radius: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="bar" class="aos-menubar" aria-label="Application">
+      <button data-aos-menu-trigger aria-controls="file">File</button>
+    </nav>
+    <div id="file" class="aos-menu" role="menu" hidden>
+      <button role="menuitem" data-command="inspect">Inspect material</button>
+      <div role="separator"></div>
+      <button role="menuitem" aria-disabled="true">Save</button>
+    </div>
+    <main>
+      <section id="panel">
+        <h1>Your content</h1>
+        <p>This is application-owned markup.</p>
+        <p id="status" role="status">Open File and use the arrow keys.</p>
+      </section>
+    </main>
+    <script type="module">
+      import { createAppearance, bindMenuBar } from "../../src/index.js";
+      const app = createAppearance();
+      app.surface(document.querySelector("#panel"), {
+        family: "standard",
+        variant: "thin",
+        size: "large",
+      });
+      app.surface(document.querySelector("#file"), { size: "large" });
+      const menu = bindMenuBar(document.querySelector("#bar"), {
+        onCommand: ({ id }) => {
+          document.querySelector("#status").textContent = id;
+        },
+      });
+      window.addEventListener(
+        "pagehide",
+        () => {
+          menu.dispose();
+          app.dispose();
+        },
+        { once: true },
+      );
+    </script>
+  </body>
+</html>

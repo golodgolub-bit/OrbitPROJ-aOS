@@ -1,0 +1,88 @@
+{
+  "name": "@qqduck/aos",
+  "version": "0.4.0",
+  "description": "OrbitPROJ. / aOS by @qqDUCK: headless appearance, macOS menu behavior, window motion and optional Liquid Glass rendering",
+  "author": "@qqDUCK",
+  "type": "module",
+  "license": "MIT",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
+    },
+    "./styles.css": "./src/appearance.css",
+    "./lens": {
+      "types": "./src/lens.d.ts",
+      "import": "./src/lens.js"
+    },
+    "./scene": {
+      "types": "./src/scene.d.ts",
+      "import": "./src/scene.js"
+    },
+    "./controls": {
+      "types": "./src/controls.d.ts",
+      "import": "./src/controls.js"
+    },
+    "./controls.css": "./src/styles.css",
+    "./ios": {
+      "types": "./src/ios.d.ts",
+      "import": "./src/ios.js"
+    },
+    "./ios.css": "./src/ios.css",
+    "./glass": {
+      "types": "./src/glass-container.d.ts",
+      "import": "./src/glass-container.js"
+    }
+  },
+  "files": [
+    "src",
+    "docs",
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "README.ru.md",
+    "assets",
+    "examples",
+    "demo",
+    "scripts/serve.mjs"
+  ],
+  "scripts": {
+    "demo": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "playwright test",
+    "typecheck": "tsc --noEmit",
+    "sync:hosts": "node scripts/sync-hosts.mjs",
+    "size": "node scripts/size.mjs",
+    "check": "npm test && npm run typecheck && npm run test:browser && npm run size"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "glass",
+    "webview2",
+    "android",
+    "ui",
+    "motion",
+    "accessibility"
+  ],
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.64.1",
+    "prettier": "3.9.10",
+    "typescript": "7.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/golodgolub-bit/OrbitPROJ-aOS.git"
+  },
+  "homepage": "https://github.com/golodgolub-bit/OrbitPROJ-aOS#readme",
+  "bugs": {
+    "url": "https://github.com/golodgolub-bit/OrbitPROJ-aOS/issues"
+  }
+}

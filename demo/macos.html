@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>OrbitPROJ. / aOS by @qqDUCK</title>
+    <link rel="stylesheet" href="../src/appearance.css" />
+    <link rel="stylesheet" href="macos.css" />
+  </head>
+  <body>
+    <div class="desktop" id="desktop">
+      <header class="aos-menubar-shell">
+        <nav class="aos-menubar" id="menubar" aria-label="Application menu">
+          <span class="orbit-mark" aria-hidden="true">◉</span>
+          <button
+            class="aos-app-name"
+            data-aos-menu-trigger
+            aria-controls="app-menu"
+          >
+            OrbitPROJ.
+          </button>
+          <button data-aos-menu-trigger aria-controls="file-menu">File</button>
+          <button data-aos-menu-trigger aria-controls="edit-menu">Edit</button>
+          <button data-aos-menu-trigger aria-controls="view-menu">View</button>
+          <button data-aos-menu-trigger aria-controls="window-menu">
+            Window
+          </button>
+          <button data-aos-menu-trigger aria-controls="help-menu">Help</button>
+        </nav>
+        <div class="aos-menu-extras">
+          <span
+            class="battery"
+            role="img"
+            aria-label="Battery 100 percent"
+          ></span
+          ><button id="control-trigger" aria-label="Control Center">
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <rect x="2" y="3" width="16" height="5" rx="2.5" />
+              <rect x="2" y="12" width="16" height="5" rx="2.5" />
+              <circle cx="6" cy="5.5" r="1.5" />
+              <circle cx="14" cy="14.5" r="1.5" />
+            </svg></button
+          ><button id="date-trigger" aria-label="Notification Center">
+            Thu 22 Oct&nbsp; 16:09
+          </button>
+        </div>
+      </header>
+      <main class="workspace" aria-label="Application workspace">
+        <section
+          class="aos-window"
+          id="library-window"
+          tabindex="-1"
+          aria-label="Library window"
+          data-active="true"
+        >
+          <header class="aos-titlebar" data-aos-titlebar>
+            <div class="aos-traffic-lights">
+              <button data-aos-window-action="close" aria-label="Close window">
+                ×</button
+              ><button
+                data-aos-window-action="minimize"
+                id="minimize"
+                aria-label="Minimize window"
+              >
+                −</button
+              ><button data-aos-window-action="zoom" aria-label="Zoom window">
+                ↗
+              </button>
+            </div>
+            <span class="window-title">Library</span
+            ><span class="window-author">aOS by @qqDUCK</span>
+          </header>
+          <div class="window-layout">
+            <aside
+              class="aos-sidebar"
+              id="sidebar"
+              aria-label="Library locations"
+            >
+              <p class="sidebar-caption">OrbitPROJ.</p>
+              <button
+                aria-current="page"
+                class="selected"
+                data-location="Library"
+              >
+                <span aria-hidden="true">▦</span> Library</button
+              ><button data-location="Source">
+                <span aria-hidden="true">⌘</span> Source</button
+              ><button data-location="Documentation">
+                <span aria-hidden="true">▤</span> Documentation</button
+              ><button data-location="Examples">
+                <span aria-hidden="true">▱</span> Examples
+              </button>
+              <p class="sidebar-caption second">Platforms</p>
+              <span class="sidebar-platform">Windows · WebView2</span
+              ><span class="sidebar-platform">Android · WebView</span
+              ><span class="sidebar-platform">Web · ES modules</span>
+            </aside>
+            <div class="document-area">
+              <div class="aos-toolbar">
+                <div class="path">
+                  OrbitPROJ. <span>›</span>
+                  <strong id="location-title">Library</strong>
+                </div>
+                <label class="search-label"
+                  ><span aria-hidden="true">⌕</span
+                  ><input
+                    type="search"
+                    id="search"
+                    aria-label="Search modules"
+                    placeholder="Search"
+                /></label>
+              </div>
+              <div class="scroll-container">
+                <div id="scroll-edge" aria-hidden="true"></div>
+                <div class="document-scroll" id="document-scroll">
+                  <div class="document-heading">
+                    <span class="library-symbol" aria-hidden="true">◉</span>
+                    <div>
+                      <h1>OrbitPROJ.</h1>
+                      <p>aOS by @qqDUCK</p>
+                    </div>
+                    <span class="version">0.4.0</span>
+                  </div>
+                  <p class="intro">
+                    Appearance and behavior for application interfaces.
+                  </p>
+                  <table class="module-table">
+                    <caption class="sr-only">
+                      Library modules
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Interface</th>
+                        <th scope="col">Module</th>
+                      </tr>
+                    </thead>
+                    <tbody id="module-list">
+                      <tr>
+                        <th scope="row">
+                          <span class="file-icon">▤</span> Appearance
+                        </th>
+                        <td>Materials, contrast, scroll edges</td>
+                        <td>Core</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="file-icon">☰</span> Menu bar
+                        </th>
+                        <td>Menus, submenus, keyboard</td>
+                        <td>Core</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="file-icon">▣</span> Window chrome
+                        </th>
+                        <td>Actions and title bar dragging</td>
+                        <td>Core</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="file-icon">↘</span> Window motion
+                        </th>
+                        <td>Genie / Scale · minimize / restore</td>
+                        <td>Core</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="file-icon">▥</span> Dock
+                        </th>
+                        <td>Activation, optional magnification</td>
+                        <td>Core</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <span class="file-icon">◒</span> Liquid Glass
+                        </th>
+                        <td>Shared optical renderer</td>
+                        <td>Optional</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="integration">
+                    <h2>Integration</h2>
+                    <pre><code>import { createAppearance, bindMenuBar }
+  from '@qqduck/aos';
+import '@qqduck/aos/styles.css';</code></pre>
+                    <p>
+                      Attach materials and controllers to your existing
+                      interface. Load the optical renderer only where you need
+                      it.
+                    </p>
+                    <a href="ios.html">iOS navigation →</a
+                    ><a href="../docs/guide.en.md">Integration guide →</a
+                    ><a href="optics.html">Optical renderer →</a>
+                  </div>
+                  <div class="implementation-note">
+                    <h2>Reference profile</h2>
+                    <p>
+                      macOS Tahoe 26. Public behavior and independent rendering.
+                      Numerical geometry and motion are estimates; exact Apple
+                      parity has not been established.
+                    </p>
+                    <a href="../docs/reference.en.md"
+                      >Behavior and fidelity →</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <footer class="window-status">
+                <span id="status" role="status">6 modules</span
+                ><span>ES modules · TypeScript declarations</span>
+              </footer>
+            </div>
+          </div>
+        </section>
+      </main>
+      <nav class="aos-dock" id="dock" aria-label="Application Dock">
+        <button
+          id="dock-library"
+          data-app="library"
+          data-running="true"
+          aria-label="Open Library"
+        >
+          <span class="aos-dock-icon library-dock">◉</span></button
+        ><span class="dock-separator" aria-hidden="true"></span
+        ><a href="../docs/guide.en.md" aria-label="Integration guide"
+          ><span class="aos-dock-icon docs-dock">▤</span></a
+        ><a href="optics.html" aria-label="Optical renderer"
+          ><span class="aos-dock-icon glass-dock">◒</span></a
+        >
+      </nav>
+      <div class="desktop-credit">OrbitPROJ. / aOS by @qqDUCK</div>
+    </div>
+
+    <div
+      class="aos-menu"
+      id="app-menu"
+      role="menu"
+      aria-label="OrbitPROJ."
+      hidden
+    >
+      <button role="menuitem" data-command="about">About OrbitPROJ.</button>
+      <div role="separator"></div>
+      <button role="menuitem" data-command="settings">
+        Settings… <kbd>⌘,</kbd>
+      </button>
+      <div role="separator"></div>
+      <button role="menuitem" data-aos-submenu aria-controls="services-menu">
+        Services <span class="submenu-arrow">›</span>
+      </button>
+      <div role="separator"></div>
+      <button role="menuitem" data-command="hide">
+        Hide OrbitPROJ. <kbd>⌘H</kbd></button
+      ><button role="menuitem" aria-disabled="true">
+        Hide Others <kbd>⌥⌘H</kbd></button
+      ><button role="menuitem" aria-disabled="true">Show All</button>
+      <div role="separator"></div>
+      <button role="menuitem" data-command="close">
+        Quit OrbitPROJ. <kbd>⌘Q</kbd>
+      </button>
+    </div>
+    <div
+      class="aos-menu"
+      id="services-menu"
+      role="menu"
+      aria-label="Services"
+      hidden
+    >
+      <button role="menuitem" aria-disabled="true">No Services Apply</button>
+    </div>
+    <div class="aos-menu" id="file-menu" role="menu" aria-label="File" hidden>
+      <button role="menuitem" data-command="open">
+        Open Library <kbd>⌘O</kbd>
+      </button>
+      <div role="separator"></div>
+      <button role="menuitem" aria-disabled="true">Save <kbd>⌘S</kbd></button
+      ><button role="menuitem" aria-disabled="true">
+        Duplicate <kbd>⇧⌘S</kbd>
+      </button>
+      <div role="separator"></div>
+      <button role="menuitem" data-command="close">
+        Close Window <kbd>⌘W</kbd>
+      </button>
+    </div>
+    <div class="aos-menu" id="edit-menu" role="menu" aria-label="Edit" hidden>
+      <button role="menuitem" aria-disabled="true">Undo <kbd>⌘Z</kbd></button
+      ><button role="menuitem" aria-disabled="true">Redo <kbd>⇧⌘Z</kbd></button>
+      <div role="separator"></div>
+      <button role="menuitem" aria-disabled="true">Cut <kbd>⌘X</kbd></button
+      ><button role="menuitem" aria-disabled="true">Copy <kbd>⌘C</kbd></button
+      ><button role="menuitem" aria-disabled="true">Paste <kbd>⌘V</kbd></button
+      ><button role="menuitem" data-command="search">
+        Find… <kbd>⌘F</kbd>
+      </button>
+    </div>
+    <div class="aos-menu" id="view-menu" role="menu" aria-label="View" hidden>
+      <button
+        role="menuitemcheckbox"
+        aria-checked="true"
+        data-command="sidebar"
+      >
+        <span class="aos-menu-check"></span>Show Sidebar
+      </button>
+      <div role="separator"></div>
+      <button role="menuitem" data-aos-submenu aria-controls="appearance-menu">
+        Appearance <span class="submenu-arrow">›</span>
+      </button>
+    </div>
+    <div
+      class="aos-menu"
+      id="appearance-menu"
+      role="menu"
+      aria-label="Appearance"
+      hidden
+    >
+      <button role="menuitemradio" aria-checked="true" data-command="light">
+        <span class="aos-menu-check"></span>Light</button
+      ><button role="menuitemradio" aria-checked="false" data-command="dark">
+        <span class="aos-menu-check"></span>Dark</button
+      ><button role="menuitemradio" aria-checked="false" data-command="auto">
+        <span class="aos-menu-check"></span>System
+      </button>
+    </div>
+    <div
+      class="aos-menu"
+      id="window-menu"
+      role="menu"
+      aria-label="Window"
+      hidden
+    >
+      <button role="menuitem" data-command="minimize">
+        Minimize <kbd>⌘M</kbd></button
+      ><button role="menuitem" data-command="zoom">Zoom</button>
+      <div role="separator"></div>
+      <button role="menuitem" data-command="open">Bring All to Front</button>
+      <div role="separator"></div>
+      <button role="menuitemcheckbox" aria-checked="true" data-command="open">
+        <span class="aos-menu-check"></span>Library
+      </button>
+    </div>
+    <div class="aos-menu" id="help-menu" role="menu" aria-label="Help" hidden>
+      <button role="menuitem" data-command="guide-en">
+        Integration Guide — English</button
+      ><button role="menuitem" data-command="guide-ru">
+        Руководство — Русский
+      </button>
+      <div role="separator"></div>
+      <button role="menuitem" data-command="reference">
+        Reference and Fidelity
+      </button>
+    </div>
+
+    <section
+      id="control-center"
+      class="aos-system-panel"
+      role="dialog"
+      aria-label="Control Center preview"
+      hidden
+    >
+      <div class="aos-control-grid">
+        <div class="aos-control-tile">
+          <span class="aos-control-icon">⌁</span>
+          <div>Wi-Fi<small>Preview network</small></div>
+        </div>
+        <div class="aos-control-tile" data-size="tall">
+          <span class="media-art" aria-hidden="true">♫</span
+          ><strong>Not Playing</strong
+          ><span aria-hidden="true">◀ &nbsp; ▶ &nbsp; ▶</span>
+        </div>
+        <div class="aos-control-tile">
+          <span class="aos-control-icon">ᛒ</span>
+          <div>Bluetooth<small>On</small></div>
+        </div>
+        <div class="aos-control-tile">
+          <span class="aos-control-icon">◎</span>
+          <div>AirDrop<small>Contacts Only</small></div>
+        </div>
+        <div class="aos-control-tile">
+          <span class="aos-control-icon">☾</span>
+          <div>Focus</div>
+        </div>
+        <div class="aos-control-tile" data-size="wide">
+          <label for="display-range" class="aos-control-heading">Display</label
+          ><input
+            id="display-range"
+            type="range"
+            value="75"
+            min="0"
+            max="100"
+            aria-label="Preview display brightness"
+          />
+        </div>
+        <div class="aos-control-tile" data-size="wide">
+          <label for="sound-range" class="aos-control-heading">Sound</label
+          ><input
+            id="sound-range"
+            type="range"
+            value="50"
+            min="0"
+            max="100"
+            aria-label="Preview sound volume"
+          />
+        </div>
+      </div>
+      <p class="preview-caption">
+        Layout preview · no system settings are changed
+      </p>
+    </section>
+    <section
+      id="notifications"
+      class="aos-system-panel aos-notification-center"
+      role="dialog"
+      aria-label="Notification Center preview"
+      hidden
+    >
+      <div class="aos-notification-stack">
+        <article class="aos-notification">
+          <header>OrbitPROJ. <time>now</time></header>
+          <h3>Library available locally</h3>
+          <p>
+            Menu commands and window motion operate inside this application.
+          </p>
+          <div data-aos-notification-actions>
+            <button id="dismiss-notification">Dismiss</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <dialog id="settings">
+      <form method="dialog">
+        <header>
+          <h2>OrbitPROJ. Settings</h2>
+          <button aria-label="Close settings">×</button>
+        </header>
+        <label
+          >Minimize windows using<select id="motion-effect">
+            <option value="genie">Genie effect</option>
+            <option value="scale">Scale effect</option>
+          </select></label
+        ><label
+          >Dock magnification<input id="magnification" type="checkbox" /></label
+        ><label
+          >Reduce transparency<input id="transparency" type="checkbox" /></label
+        ><label
+          >Reduce motion<input id="reduce-motion" type="checkbox"
+        /></label>
+        <p>Preview preferences apply to this application.</p>
+      </form>
+    </dialog>
+    <dialog id="about">
+      <h2>OrbitPROJ.</h2>
+      <p>aOS by @qqDUCK · 0.4.0</p>
+      <p>Appearance and behavior library.</p>
+      <form method="dialog"><button>Close</button></form>
+    </dialog>
+    <script type="module" src="macos.js"></script>
+  </body>
+</html>

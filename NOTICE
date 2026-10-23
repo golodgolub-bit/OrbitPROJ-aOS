@@ -1,0 +1,15 @@
+OrbitPROJ. / aOS by @qqDUCK is an independent implementation. It is not affiliated with, endorsed
+by or distributed by Apple. Apple, iOS, macOS, San Francisco and Liquid Glass
+are names/trademarks of their respective owners. No Apple font, icon, wallpaper,
+sound, design-resource file or private implementation is bundled.
+
+Original source is MIT licensed. MIT does not grant third-party trademark or
+patent rights. A commercial release may require an independent rights review.
+
+Gradle Wrapper files under platforms/android are provided by the Gradle project
+under Apache License 2.0. See third-party/gradle-LICENSE.txt.
+AndroidX WebKit is an external build dependency under Apache License 2.0.
+Microsoft WebView2 SDK/runtime is an external dependency under Microsoft's terms.
+Development tools are installed separately through package-lock.json and retain
+their own licenses. The production JavaScript/CSS core has no runtime dependency.
+Local system fonts are referenced by family name and are not redistributed.

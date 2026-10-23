@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>OrbitPROJ. / aOS by @qqDUCK — Optical renderer</title>
+    <link rel="stylesheet" href="../src/appearance.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 36px;
+        background: #eff0f2;
+        color: #17191d;
+        font:
+          14px/1.6 system-ui,
+          sans-serif;
+      }
+      main {
+        max-width: 960px;
+        margin: auto;
+      }
+      h1 {
+        font-size: 24px;
+        letter-spacing: -0.5px;
+        margin: 24px 0 0;
+      }
+      h2 {
+        font-size: 14px;
+      }
+      p {
+        color: #50565e;
+      }
+      a {
+        color: #0057b8;
+      }
+      canvas {
+        display: block;
+        width: 100%;
+        height: 360px;
+        border-radius: 18px;
+        background: #b2bfcc;
+      }
+      fieldset {
+        border: 0;
+        padding: 0;
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 22px 0;
+      }
+      button,
+      select {
+        font: inherit;
+        border: 1px solid #b5b8bd;
+        border-radius: 7px;
+        background: #fff;
+        color: #1c2228;
+        padding: 6px 12px;
+      }
+      label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      code {
+        font:
+          12px/1.5 Consolas,
+          monospace;
+      }
+      #result {
+        min-height: 24px;
+      }
+      button:focus-visible,
+      select:focus-visible {
+        outline: 3px solid #0063e1;
+        outline-offset: 3px;
+      }
+      @media (max-width: 600px) {
+        body {
+          padding: 20px;
+        }
+        canvas {
+          height: 260px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a href="macos.html">← OrbitPROJ. / aOS by @qqDUCK</a>
+      <h1>Optical renderer</h1>
+      <p>
+        Regular and Clear. Shared backdrop, refraction, blur, shape union and
+        material transitions.
+      </p>
+      <canvas
+        id="glass"
+        width="960"
+        height="360"
+        aria-label="Two refracting glass shapes over a static reference grid"
+      ></canvas>
+      <p id="fallback" hidden>
+        WebGL2 is unavailable. Use CSS materials or an opaque surface.
+      </p>
+      <fieldset>
+        <legend class="sr-only">Renderer operations</legend>
+        <label
+          >Variant
+          <select id="variant">
+            <option value="regular">Regular</option>
+            <option value="clear">Clear</option>
+          </select></label
+        ><button id="morph">Morph</button><button id="merge">Merge</button
+        ><button id="materialize">Materialize</button>
+      </fieldset>
+      <p id="result" role="status">Static backdrop · no pointer lighting</p>
+      <h2>Explicit rendering</h2>
+      <p>
+        The application supplies backdrop pixels and shape geometry. This
+        renderer does not capture HTML, native views or the desktop. Numeric
+        optical values are independent estimates.
+      </p>
+      <a href="../docs/material.en.md">Material API →</a>
+    </main>
+    <script type="module" src="optics.js"></script>
+  </body>
+</html>
